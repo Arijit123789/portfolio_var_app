@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: portfolio-var-app
+    env: docker
+    plan: free  # You can change to 'starter' or 'standard' if needed
+    autoDeploy: true
+    region: oregon  # or 'singapore' / 'frankfurt' etc.
+    preview:
+      autoDeploy: true
+    buildCommand: ""
+    startCommand: ""
+    envVars:
+      - key: PORT
+        value: 8501
